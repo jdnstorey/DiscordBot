@@ -2,7 +2,7 @@ import nextcord
 from nextcord.ext import commands
 from nextcord import Interaction
 
-from settings.server_ids import testing_server_id
+from settings.server_ids import testing_server_id, polo_king
 
 
 class Dropdown(nextcord.ui.Select):
@@ -35,7 +35,7 @@ class Dropdowns(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    # @nextcord.slash_command(name="help", description="Request a help service",guild_ids=[testing_server_id])
+    # @nextcord.slash_command(name="help", description="Request a help service",guild_ids=[testing_server_id, polo_king])
     # async def help_command(self, interaction: Interaction):
     #    view = DropdownView()
     #    await interaction.response.send_message("What help service would you like?", view = view, ephemeral=True)

@@ -2,7 +2,7 @@ import nextcord
 from nextcord import Interaction
 from nextcord.ext import commands
 
-from settings.server_ids import testing_server_id
+from settings.server_ids import testing_server_id, polo_king
 
 
 class MessageDelete(commands.Cog):
@@ -10,7 +10,7 @@ class MessageDelete(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @nextcord.slash_command(name="delete", description="Deletes messages", guild_ids=[testing_server_id])
+    @nextcord.slash_command(name="delete", description="Deletes messages", guild_ids=[testing_server_id, polo_king])
     @commands.has_permissions(manage_messages = True)
     async def delete_message(self, interaction: Interaction, limit: int):
         await interaction.channel.purge(limit = limit)
